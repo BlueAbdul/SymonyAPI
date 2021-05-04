@@ -1,0 +1,86 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Api Documentation{% endblock %}
+
+{% block body %}
+<style>
+    .container{
+        min-height: 100vh;
+        
+    }
+
+    .json{
+        word-break: break-all;
+        background:black;
+        color:white;
+    }
+
+    body{
+       background-image: url('https://source.unsplash.com/random/1920x1080');
+       background-size: cover;
+
+    }
+</style>
+
+<div class="container shadow-lg p-3 mb-5 bg-white rounded">
+<div class="row shadow-lg p-3 mb-5 bg-white rounded">
+
+
+<div class="col-1 text-success">GET</div>
+<div class="col-11"> /articles/all</div>
+
+</div>
+<br>
+<div class="row p-5">
+<p>Envoi tout les articles sous format JSON</p>
+<br>
+<pre class="json">
+<code >
+[
+    {
+        "id": 1,
+        "titre": "La simplicité de changer plus rapidement",
+        "description": "Non omnis aspernatur aliquid ad nihil id. Quisquam explicabo velit nihil error atque. Mollitia ipsam delectus quia. Voluptas sint ut molestias ipsam iusto quia."
+    },
+    {
+        "id": 2,
+        "titre": "L'assurance d'atteindre vos buts sans soucis",
+        "description": "Aut voluptate quos tempora in debitis. Ut atque praesentium ut aliquam id ex accusamus. Deserunt debitis quo nihil omnis eos et. Voluptas sed reiciendis quisquam perspiciatis ea modi dolore nostrum."
+    },
+    {
+        "id": 3,
+        "titre": "Le plaisir de rouler en toute tranquilité",
+        "description": "Rerum placeat eius neque amet itaque quia. Earum non voluptatibus nam quisquam beatae. Aut omnis ea et voluptates quos amet distinctio."
+    },
+    {
+        "id": 4,
+        "titre": "La sécurité d'évoluer plus rapidement",
+        "description": "Autem quia sit eveniet sequi. Numquam vel deserunt natus numquam optio ut. Sit non ipsam dignissimos est. Omnis sunt laudantium commodi rerum voluptatem sit."
+    }
+]
+</code>
+</pre>
+</div>
+<div class="row shadow-lg p-3 mb-5 bg-white rounded">
+
+
+<div class="col-1 text-success">GET</div>
+<div class="col-11"> /article/show/:id</div>
+
+</div>
+<br>
+<div class="row p-5">
+<p>Envoi l'article avec l'id donné en paramètre</p>
+<br>
+<pre class="json">
+<code >
+{
+    "id": 2,
+    "titre": "L'assurance d'atteindre vos buts sans soucis",
+    "description": "Aut voluptate quos tempora in debitis. Ut atque praesentium ut aliquam id ex accusamus. Deserunt debitis quo nihil omnis eos et. Voluptas sed reiciendis quisquam perspiciatis ea modi dolore nostrum."
+}
+</code>
+</pre>
+</div>
+</div>
+{% endblock %}
